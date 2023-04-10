@@ -1,0 +1,27 @@
+type ERC20Recovered @entity(immutable: true) {
+  id: Bytes!
+  requestedBy: Bytes! # address
+  token: Bytes! # address
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ERC721Recovered @entity(immutable: true) {
+  id: Bytes!
+  requestedBy: Bytes! # address
+  token: Bytes! # address
+  tokenId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ETHReceived @entity(immutable: true) {
+  id: Bytes!
+  amount: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
